@@ -1,6 +1,6 @@
 # MERN-Task-Tracker-App
 
-This Task Tracker App is fullstack App
+This Task Tracker App is Fullstack App
 
 REQUIREMENT
 - Frontend (React)
