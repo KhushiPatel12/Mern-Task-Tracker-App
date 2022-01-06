@@ -1,0 +1,15 @@
+const express = require('express')
+const app = express()
+const mongoose = require("mongoose")
+const task = require("./model/taskModel")
+const User = require("./model/userModel")
+const tsk = require("./Router/taskRouter")
+const us = require("./Router/userRouter")
+app.use(express.json())
+const port = 4000
+
+mongoose.connect("mongodb://127.0.0.1:27017/tasktrackerapp").then(()=>{console.log("connected ...")})
+app.use("/task",tsk)
+app.use("/userpage",us)
+app.get('/', (req, res) => res.send('Hello World!'))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
